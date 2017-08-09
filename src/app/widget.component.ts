@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { products } from './products';
 
 @Component({
   selector: 'widget-component',
@@ -19,5 +20,7 @@ export class WidgetComponent {
    name: "World",
    data: [1.988, 2.733, 3.994, 3.464, 4.001, 3.939, 1.333, -2.245, 4.339, 2.727]
  }];
+
  private categories: number[] = [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011];
+ private gridData: any[] = products;
 }

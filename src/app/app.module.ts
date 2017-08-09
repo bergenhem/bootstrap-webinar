@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { GridModule } from '@progress/kendo-angular-grid';
 
 import { AppComponent } from './app.component';
 import { BootstrapComponent } from './bootstrap.component';
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     ChartsModule,
     ButtonsModule,
+    GridModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

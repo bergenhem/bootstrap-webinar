@@ -20,4 +20,25 @@
       </kendo-chart>
     </div>
   </div>
+  <div class="row my-3">
+    <div class="col">
+      <kendo-grid [data]="gridData" [height]="410">
+           <kendo-grid-column field="ProductID" title="ID" media="lg" width="40">
+           </kendo-grid-column>
+           <kendo-grid-column field="ProductName" title="Name" media="sm" width="250">
+           </kendo-grid-column>
+           <kendo-grid-column field="Category.CategoryName" title="Category" media="sm" width="200">
+           </kendo-grid-column>
+           <kendo-grid-column field="UnitPrice" title="Price" media="sm" width="80">
+           </kendo-grid-column>
+           <kendo-grid-column field="UnitsInStock" title="In stock" media="sm" width="80">
+           </kendo-grid-column>
+           <kendo-grid-column field="Discontinued" title="Discontinued" media="lg" width="120">
+               <ng-template kendoGridCellTemplate let-dataItem>
+                   <input type="checkbox" [checked]="dataItem.Discontinued" disabled/>
+               </ng-template>
+           </kendo-grid-column>
+       </kendo-grid>
+    </div>
+  </div>
 </div>
