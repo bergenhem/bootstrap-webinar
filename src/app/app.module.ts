@@ -8,10 +8,10 @@ import { WidgetComponent } from './widget.component';
 import { AboutComponent } from './about.component';
 
 const appRoutes: Routes = [
-  { path: '', component: BootstrapComponent },
+  { path: '', redirectTo: '/bootstrap', pathMatch: 'full' },
+  { path: 'bootstrap', component: BootstrapComponent },
   { path: 'widgets', component: WidgetComponent },
   { path: 'about', component: AboutComponent },
-  { path: '**', component: BootstrapComponent }
 ];
 
 @NgModule({
