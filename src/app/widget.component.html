@@ -1,0 +1,44 @@
+<div class="container-fluid">
+  <div class="row my-3">
+    <div class="col">
+      <button kendoButton (click)="onButtonClick()">Default</button>
+      <button kendoButton (click)="onButtonClick()" [primary]="true">Primary</button>
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col">
+      <kendo-chart [categoryAxis]="{ categories: categories }">
+        <kendo-chart-title text="Gross domestic product growth /GDP annual %/"></kendo-chart-title>
+        <kendo-chart-legend position="bottom" orientation="horizontal"></kendo-chart-legend>
+        <kendo-chart-tooltip format="{0}%"></kendo-chart-tooltip>
+        <kendo-chart-series>
+          <kendo-chart-series-item *ngFor="let item of series"
+                                   type="line" style="smooth" [data]="item.data"
+                                   [name]="item.name">
+          </kendo-chart-series-item>
+        </kendo-chart-series>
+      </kendo-chart>
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col">
+      <kendo-grid [data]="gridData" [height]="410">
+           <kendo-grid-column field="ProductID" title="ID" media="lg" width="40">
+           </kendo-grid-column>
+           <kendo-grid-column field="ProductName" title="Name" media="sm" width="250">
+           </kendo-grid-column>
+           <kendo-grid-column field="Category.CategoryName" title="Category" media="sm" width="200">
+           </kendo-grid-column>
+           <kendo-grid-column field="UnitPrice" title="Price" media="sm" width="80">
+           </kendo-grid-column>
+           <kendo-grid-column field="UnitsInStock" title="In stock" media="sm" width="80">
+           </kendo-grid-column>
+           <kendo-grid-column field="Discontinued" title="Discontinued" media="lg" width="120">
+               <ng-template kendoGridCellTemplate let-dataItem>
+                   <input type="checkbox" [checked]="dataItem.Discontinued" disabled/>
+               </ng-template>
+           </kendo-grid-column>
+       </kendo-grid>
+    </div>
+  </div>
+</div>
