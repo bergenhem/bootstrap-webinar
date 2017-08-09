@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { ChartsModule } from '@progress/kendo-angular-charts';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
 
 import { AppComponent } from './app.component';
 import { BootstrapComponent } from './bootstrap.component';
@@ -29,6 +31,7 @@ const appRoutes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     ChartsModule,
+    ButtonsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
